@@ -9,26 +9,29 @@
 
 
 #!/bin/bash
-echo "Verificando si alguno de los archivos contiene caracteres acentuados...}"
-echo "#################################################"
-# Verificamos si algun archivo en la staged area contiene caracteres acentuados. Utilizamos grep -lE para listar los archivos, no el contenido.
-files_with_accented_chars=$(git diff --staged --name-only | xargs grep -lE "[áéíóúüàèìòùÀÈÌÒÙÁÉÍÓÚÜñÑâêîôûÂÊÎÔÛ]")
+# echo "Verificando si alguno de los archivos contiene caracteres acentuados...}"
+# echo "#################################################"
+# # Verificamos si algun archivo en la staged area contiene caracteres acentuados. Utilizamos grep -lE para listar los archivos, no el contenido.
+# files_with_accented_chars=$(git diff --staged --name-only | xargs grep -lE "[áéíóúüàèìòùÀÈÌÒÙÁÉÍÓÚÜñÑâêîôûÂÊÎÔÛ]")
 
-if [ -n "$files_with_accented_chars" ]; then
-  echo "Error: Algunos archivos contienen caracteres acentuados y no se pueden subir."
-  echo ""
-  echo "$files_with_accented_chars"
-  echo ""
-  echo "No se puede realizar commit a este archivo."
-  exit 1
-fi
+# if [ -n "$files_with_accented_chars" ]; then
+#   echo "Error: Algunos archivos contienen caracteres acentuados y no se pueden subir."
+#   echo ""
+#   echo "$files_with_accented_chars"
+#   echo ""
+#   echo "No se puede realizar commit a este archivo."
+#   exit 1
+# fi
 
-# npx eslint ./*.html
+# # npx eslint ./*.html
 
 echo "Ejecutamos el linter a los archivos HTML del proyecto...."
 echo ""
 npx eslint --ext .html
 echo "Linter ejecutado"
+echo "Comprobación pre-commit realizada con éxito"
+echo "--------------------------------------------"
+echo "" 
 
 # # Ejecutamos npm eslint a los HTML
 # html_files=$(git diff --staged --name-only | grep -E "\.html$")

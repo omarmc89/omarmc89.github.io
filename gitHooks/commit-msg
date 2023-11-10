@@ -21,11 +21,22 @@
 # Lee el mensaje de commit desde el archivo
 commit_msg_file="$1"
 commit_msg=$(cat "$commit_msg_file")
+echo "Comprobación del commit-msg"
 
 # Comprueba si el mensaje de commit cumple con el patrón
 if ! [[ "$commit_msg" =~ .*\n. ]]; then
   echo "El mensaje de commit debe tener al menos dos líneas (titulo y descripción): La primera linea es el titulo y a partir de la segunda la descripción"
   exit 1
 fi
+
+second_line=$(echo -e "$commit_msg" | sed -n '2p')
+
+# Verificar si la segunda línea comienza con un guion
+if ! [[ "$second_line" =~ ^- ]]; then
+  echo "La segunda linea debe comenzar con un guión. Esto es la descripción."
+  echo "$commit_msg"
+  exit 1
+fi
+
 
 

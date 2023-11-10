@@ -144,4 +144,32 @@ En la metodología de GitFlow se indica que una vez se fusionan las ramas *featu
 <p align="center"><img src="./images/eliminar%20ramas%20features%20usuario2.jpg"></p>
 <p align="center"><img src="./images/eliminar%20ramas%20usuario3.jpg"></p>
 
+#### Git Hooks
+
+Como requisito se debía realizar tres hooks:
+
+* Automatización del comando *npm install* con el clone/checkout.
+
+<p align="center"><img src="./images/hook1.jpg"></p>
+
+Test:
+
+<p align="center"><img src="./images/test%20hook%20checkout.jpg"></p>
+
+* Comprobación del mensaje en el commit. Debe tener titulo y descripción:
+
+<p align="center"><img src="./images/hook2.jpg"></p>
+  
+<p align="center"><img src="./images/test%20commit-msg%20y%20linter%20.jpg"></p>
+
+* Ejecución del linter para comprobar los archivos HTML.
+  
+<p align="center"><img src="./images/hook3.jpg"></p>
+<p align="center"><img src="./images/test%20hook%20linter.jpg"></p>
+
+
+
+
+
+
 
