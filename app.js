@@ -38,3 +38,26 @@ modifyAttributesHtml.addEventListener('click', function () {
         parrafo.setAttribute("class", "hidden")
     }
 }) 
+
+const modifyCss = document.querySelector('#modify-css')
+
+modifyCss.addEventListener('click', function () {
+    const parrafo = document.querySelector(".description > p")
+    const img = document.querySelector(".img-description")
+    const navbar = document.querySelector(".navbar")
+
+    if (parrafo.style.color === "darkblue") {
+        window.location.reload()
+
+    } else {
+        parrafo.style.backgroundColor = "rgba(255, 192, 203, 0.7)"
+        parrafo.style.fontSize = "20px"
+        parrafo.style.color = "darkblue"
+        parrafo.style.borderRadius = "20px"
+        parrafo.style.padding ="20px 20px"
+
+        navbar.style.backgroundColor = "rgba(255, 192, 203, 0.7)"
+
+        img.style.display = "none"
+    }
+})
