@@ -61,3 +61,8 @@ modifyCss.addEventListener('click', function () {
         img.style.display = "none"
     }
 })
+
+const home= document.querySelector("#home-btn")
+home.addEventListener("click", function() {
+    window.location.reload()
+})
