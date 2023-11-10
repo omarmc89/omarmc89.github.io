@@ -9,10 +9,8 @@
 
 ***
 
-#### Indice
 - [💻 Simulación de un proyecto con GitFlow 💻](#-simulación-de-un-proyecto-con-gitflow-)
       - [Tecnologías utilizadas](#tecnologías-utilizadas)
-      - [Indice](#indice)
       - [Descripción](#descripción)
       - [Introducción](#introducción)
       - [GitFlow](#gitflow)
@@ -20,6 +18,7 @@
       - [Proyecto](#proyecto)
       - [Proceso](#proceso)
       - [Git Hooks](#git-hooks)
+
 
 
 #### Descripción
