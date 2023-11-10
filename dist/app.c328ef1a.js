@@ -152,6 +152,23 @@ modifyAttributesHtml.addEventListener('click', function () {
     parrafo.setAttribute("class", "hidden");
   }
 });
+var modifyCss = document.querySelector('#modify-css');
+modifyCss.addEventListener('click', function () {
+  var parrafo = document.querySelector(".description > p");
+  var img = document.querySelector(".img-description");
+  var navbar = document.querySelector(".navbar");
+  if (parrafo.style.color === "darkblue") {
+    window.location.reload();
+  } else {
+    parrafo.style.backgroundColor = "rgba(255, 192, 203, 0.7)";
+    parrafo.style.fontSize = "20px";
+    parrafo.style.color = "darkblue";
+    parrafo.style.borderRadius = "20px";
+    parrafo.style.padding = "20px 20px";
+    navbar.style.backgroundColor = "rgba(255, 192, 203, 0.7)";
+    img.style.display = "none";
+  }
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -177,7 +194,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51742" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
