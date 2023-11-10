@@ -131,7 +131,7 @@ modificarHtml.addEventListener("click", function () {
     parrafo.classList.add("hidden");
     imagen.classList.add("hidden");
     var p = document.createElement("p");
-    var texto = document.createTextNode("Esta feature ha sido creada por el usuario2 y consistia en modificar el contenido html de la web al pulsar el botón correspondiente");
+    var texto = document.createTextNode("Esta feature ha sido creada por el usuario2 y consistia en modificar el contenido html de la web al pulsar el botón correspondiente.");
     p.appendChild(texto);
     var img = document.createElement("img");
     img.src = "https://miro.medium.com/v2/resize:fit:600/0*fh4jM9d0jtXMIuEv.jpg";
@@ -139,6 +139,17 @@ modificarHtml.addEventListener("click", function () {
     img.classList.add("img-description");
     section.appendChild(p);
     section.appendChild(img);
+  }
+});
+var modifyAttributesHtml = document.querySelector('#modify-attr-html');
+modifyAttributesHtml.addEventListener('click', function () {
+  var img = document.querySelector(".img-description");
+  var parrafo = document.querySelector(".description > p");
+  if (parrafo.classList.contains("hidden")) {
+    window.location.reload();
+  } else {
+    img.setAttribute("src", 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png');
+    parrafo.setAttribute("class", "hidden");
   }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

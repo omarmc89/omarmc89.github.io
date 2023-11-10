@@ -13,7 +13,7 @@ const imagen = document.querySelector(".img-description")
         parrafo.classList.add("hidden");
         imagen.classList.add("hidden");
         const p = document.createElement("p")
-        const texto = document.createTextNode("Esta feature ha sido creada por el usuario2 y consistia en modificar el contenido html de la web al pulsar el botón correspondiente")
+        const texto = document.createTextNode("Esta feature ha sido creada por el usuario2 y consistia en modificar el contenido html de la web al pulsar el botón correspondiente.")
         p.appendChild(texto);
 
         const img = document.createElement("img")
@@ -25,3 +25,16 @@ const imagen = document.querySelector(".img-description")
         section.appendChild(img)
     }
 })
+
+const modifyAttributesHtml = document.querySelector('#modify-attr-html')
+
+modifyAttributesHtml.addEventListener('click', function () {
+    const img = document.querySelector(".img-description")
+    const parrafo = document.querySelector(".description > p")
+    if (parrafo.classList.contains("hidden")) {
+        window.location.reload()
+    } else {
+        img.setAttribute("src", 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png')
+        parrafo.setAttribute("class", "hidden")
+    }
+}) 
