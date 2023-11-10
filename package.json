@@ -1,0 +1,30 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": "",
+  "license": "",
+  "author": "",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "lint": "eslint . --fix",
+    "linthtml": "eslint --ext .html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.20.0",
+    "@html-eslint/parser": "^0.20.0",
+    "eslint": "^8.53.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "deasync": "^0.1.29",
+    "fsevents": "^2.3.3"
+  }
+}

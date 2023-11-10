@@ -1,0 +1,31 @@
+#!/bin/bash
+#prueba
+echo "hola desde el checkout"
+# Ruta del repositorio
+repo_dir="$PWD"
+# echo "$PWD"
+# Rama anterior
+old_branch="$1"
+# echo $1
+# Nueva rama
+new_branch="$2"
+# echo $2
+# Flag indicator si se han modificado archivos
+file_change="$3"
+# echo $file_change
+# # Revisamos si ha cambiado de rama
+# if [ "$old_branch" != "$new_branch" ]; then
+#   echo "Cambiando a la rama: $new_branch"
+
+  # Verificar si existe un archivo package.json en el directorio raíz
+  if [ -f "$repo_dir/package.json" ]; then
+    echo "Detectado package.json....."
+    echo ""
+    echo "Ejecutando 'npm install' en el repositorio..."
+    echo ""
+    cd "$repo_dir"
+    npm install
+  else
+    echo "No hay archivo package.json en el directorio"
+  fi
+fi
