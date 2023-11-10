@@ -37,10 +37,18 @@ Permite a los desarrolladores almacenar, compartir y gestionar el código fuente
 
 #### Proyecto
 Se simula un pequeño proyecto que consta de una página web con varios botones los cuáles modifican estilos y el HTML. Cada característica añadida estará realizada por un usuario diferente.
-<p align="center"><img src="https://cdn2.iconfinder.com/data/icons/document-20/100/Html-512.png" style="width:200px">
+
+<p align="center"><img src="https://cdn2.iconfinder.com/data/icons/document-20/100/Html-512.png" style="width:200px"></p>
 
 En este caso para simular los diferentes miembros del equipo trabajaremos en carpetas diferentes, realizando los distintos comandos de git en cada una de ellas.
 
+***
+
+<h5 style="text-align: center;">Resultado final</h5>
+
+<p align="center"><img src="./images/web.jpg"></p>
+
+***
 
 #### Proceso
 
