@@ -62,7 +62,7 @@ modifyCss.addEventListener('click', function () {
     }
 })
 
-const home= document.querySelector("#home-btn")
-home.addEventListener("click", function() {
+const homeBtn= document.querySelector("#home-btn")
+homeBtn.addEventListener("click", function() {
     window.location.reload()
 })
