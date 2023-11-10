@@ -117,25 +117,30 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/plugins.js":[function(require,module,exports) {
-// Avoid `console` errors in browsers that lack a console.
-(function () {
-  var method;
-  var noop = function noop() {};
-  var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'];
-  var length = methods.length;
-  var console = window.console = window.console || {};
-  while (length--) {
-    method = methods[length];
-
-    // Only stub undefined methods.
-    if (!console[method]) {
-      console[method] = noop;
-    }
+})({"app.js":[function(require,module,exports) {
+var modificarHtml = document.querySelector("#modify-html");
+modificarHtml.addEventListener("click", function () {
+  var section = document.querySelector(".description");
+  var parrafo = document.querySelector(".description > p");
+  var imagen = document.querySelector(".img-description");
+  if (parrafo.classList.contains("hidden")) {
+    parrafo.classList.remove("hidden");
+    imagen.classList.remove("hidden");
+    window.location.reload();
+  } else {
+    parrafo.classList.add("hidden");
+    imagen.classList.add("hidden");
+    var p = document.createElement("p");
+    var texto = document.createTextNode("Esta feature ha sido creada por el usuario2 y consistia en modificar el contenido html de la web al pulsar el botón correspondiente");
+    p.appendChild(texto);
+    var img = document.createElement("img");
+    img.src = "https://miro.medium.com/v2/resize:fit:600/0*fh4jM9d0jtXMIuEv.jpg";
+    img.alt = "feature-img";
+    img.classList.add("img-description");
+    section.appendChild(p);
+    section.appendChild(img);
   }
-})();
-
-// Place any jQuery/helper plugins in here.
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -305,5 +310,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/plugins.js"], null)
-//# sourceMappingURL=/plugins.7f97feee.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","app.js"], null)
+//# sourceMappingURL=/app.c328ef1a.js.map

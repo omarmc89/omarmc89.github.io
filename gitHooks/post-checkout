@@ -18,14 +18,13 @@ file_change="$3"
 #   echo "Cambiando a la rama: $new_branch"
 
   # Verificar si existe un archivo package.json en el directorio raíz
-  if [ -f "$repo_dir/package.json" ]; then
-    echo "Detectado package.json....."
-    echo ""
-    echo "Ejecutando 'npm install' en el repositorio..."
-    echo ""
-    cd "$repo_dir"
-    npm install
-  else
-    echo "No hay archivo package.json en el directorio"
-  fi
+if [ -f "$repo_dir/package.json" ]; then
+  echo "Detectado package.json....."
+  echo ""
+  echo "Ejecutando 'npm install' en el repositorio..."
+  echo ""
+  cd "$repo_dir"
+  npm install
+else
+  echo "No hay archivo package.json en el directorio"
 fi

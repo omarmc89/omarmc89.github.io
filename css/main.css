@@ -158,7 +158,7 @@ textarea {
     padding: 10px;
   }
 
-  .description {
+  .description p {
     margin: 40px;
     text-align: justify;
   }
@@ -169,6 +169,7 @@ textarea {
     margin-left:auto;
     margin-right:auto;
     display: block;
+    border-radius: 20px;
   }
 
   footer {
